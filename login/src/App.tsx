@@ -11,7 +11,7 @@ import {NoEncontrado} from './pages/404';
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+      {/* <Navbar />  */}
       <Routes>
         <Route path="/" element={<Inicio />} />
         <Route path="/registro" element={<Registro />} />

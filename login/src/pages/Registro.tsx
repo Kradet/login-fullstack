@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import '../styles/estilos.css'
 export function Registro() {
 	const navigate = useNavigate();
 	const [datos, setDatos] = useState({
@@ -82,20 +82,22 @@ export function Registro() {
 	};
 
 	return (
-		<div className="">
-			<form action="" method="post" onSubmit={handleSubmit}>
-				<h1>Registro de usuarios</h1>
-				<div className="">
+		<>
+		<div className="rectangulo"><h1>Cómputo en la Nube</h1></div>
+		<section>
+			
+			<form className="caja" action="" method="post" onSubmit={handleSubmit}>
+				<h2>Registro de usuarios</h2>
+
 					<label htmlFor="nombre">Nombre</label>
-					<br />
 					<input
 						type="text"
 						id="nombre"
 						name="nombre"
 						onChange={handleChange}
 					/>
-				</div>
-				<div className="">
+
+
 					<label htmlFor="apellidos">Apellido</label>
 					<br />
 					<input
@@ -104,8 +106,8 @@ export function Registro() {
 						name="apellidos"
 						onChange={handleChange}
 					/>
-				</div>
-				<div className="">
+
+
 					<label htmlFor="rfc">RFC</label>
 					<br />
 					<input
@@ -114,8 +116,8 @@ export function Registro() {
 						name="rfc"
 						onChange={handleChange}
 					/>
-				</div>
-				<div className="">
+
+
 					<label htmlFor="direccion">Direccion</label>
 					<br />
 					<input
@@ -124,8 +126,8 @@ export function Registro() {
 						name="direccion"
 						onChange={handleChange}
 					/>
-				</div>
-                <div className="">
+
+
                     <label htmlFor="telefono">Telefono</label>
 					<br />
 					<input
@@ -134,8 +136,8 @@ export function Registro() {
 						name="telefono"
 						onChange={handleChange}
 					/>
-                </div>
-                <div className="">
+ 
+
                     <label htmlFor="email">E-Mail</label>
 					<br />
 					<input
@@ -144,13 +146,11 @@ export function Registro() {
 						name="email"
 						onChange={handleChange}
 					/>
-                </div>
-            <button type="submit">
+            <button className="boton" type="submit">
                 Registrar Usuario
             </button>
 			</form>
-
-		</div>
-        
+		</section>
+		</>        
 	);
 }

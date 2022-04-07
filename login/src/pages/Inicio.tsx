@@ -1,24 +1,23 @@
 import { Link, useNavigate } from   "react-router-dom";
-
+import '../styles/estilos.css'
 export function Inicio(){
     const navigate = useNavigate();
 
     return(
-        <div className="">
-            <div className="">
-                <h1>Bienvenido</h1>
-                
-            </div>
-            <div className="">
-                <button>
+        <header>
+                <h1>¡Bienvenido!</h1>
+
+            <nav>
+                <ul>
+                <li>
                     <Link to="/listar">Ver lista de usuarios</Link>
-                </button>
-            </div>
-            <div className="">
-                <button>
+                </li>
+
+                <li>
                     <Link to="/registro">Registrar Usuarios</Link>
-                </button>
-            </div>
-        </div>
+                </li>
+                </ul>
+            </nav>
+        </header>
     );
 }
